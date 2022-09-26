@@ -22,3 +22,6 @@ $array = ["Apple", 5, "Banana", 3.14, "Mango"];
 echo "<pre>";
 print_r($array);
 echo "</pre>";
+?>
+<hr>
+<h2>위, 아래는 근본적으로 똑같다..</h2>
