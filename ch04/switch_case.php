@@ -18,6 +18,6 @@ switch ($score) {
         echo "You got 60 points!";
         break;
     default:
-        echo "You sucks! Lick my balls!";
+        echo "You sucks!";
         break;
 }
