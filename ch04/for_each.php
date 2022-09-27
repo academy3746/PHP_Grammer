@@ -6,7 +6,7 @@ $rock_bands = [
 ];
 
 echo "<h1>Value only</h1>";
-echo "<h3>Song only</h3>";
+echo "<h2>Song only</h2>";
 foreach ($rock_bands as $rock_band) {
     echo "<p>{$rock_band}</p>";
 }
@@ -14,7 +14,7 @@ foreach ($rock_bands as $rock_band) {
 echo "<hr>";
 
 echo "<h1>Key: Value</h1>";
-echo "<h3>Band: Song</h3>";
+echo "<h2>Band: Song</h2>";
 foreach ($rock_bands as $rock_band => $song) {
     echo "<p>{$rock_band} => {$song}</p>";
 }
