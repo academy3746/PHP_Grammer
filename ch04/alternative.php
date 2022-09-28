@@ -21,13 +21,13 @@
     $score = 40;
 
     if ($score >= 90):
-        echo "You got A score!";
+        echo "You got A grade!";
     elseif ($score >= 80):
-        echo "You got B score!";
+        echo "You got B grade!";
     elseif ($score >= 70):
-        echo "You got C score";
+        echo "You got C grade";
     elseif ($score >= 60):
-        echo "You got D score!";
+        echo "You got D grade!";
     else:
         echo "재수강 해 임마!";
     endif;
@@ -61,8 +61,9 @@
             echo "i is 5";
             break;
         default:
-            echo "Invalid value!<br>
-        Please insert limited value between 0 to 5<br>";
+            echo "
+            Invalid value!<br>
+            Please insert limited value between 0 to 5<br>";
     endswitch;
     ?>
 
