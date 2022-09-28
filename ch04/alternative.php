@@ -39,6 +39,7 @@
     <h3>통상적으로 쓰이는 switch-case 구문을 대체하여 쓸 수 있다.</h3>
 
     <?php
+    // #1
     $i = 4;
 
     switch ($i):
@@ -65,6 +66,25 @@
             Invalid value!<br>
             Please insert limited value between 0 to 5<br>";
     endswitch;
+    ?>
+
+    <br>
+
+    <?php
+    // #2
+    $i = 3;
+
+    echo match ($i) {
+        0 => "i is 0",
+        1 => "i is 1",
+        2 => "i is 2",
+        3 => "i is 3",
+        4 => "i is 4",
+        5 => "i is 5",
+        default => "
+            Invalid value!<br>
+            Please insert limited value between 0 to 5<br>",
+    };
     ?>
 
     <hr>
