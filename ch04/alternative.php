@@ -105,7 +105,7 @@
     );
 
     foreach ($arr as $key => $value):
-        echo "<p>{$key}:{$value}</p>";
+        echo "<p>{$key}: {$value}</p>";
     endforeach;
     ?>
 </body>
