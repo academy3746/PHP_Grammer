@@ -36,6 +36,10 @@
     }
     rock_star(band: 'Nirvana', genre: 'Grunge Rock');
     rock_star(genre: 'British Pop', band: 'Oasis');
+    rock_star(band: 'Guns N Roses', genre: 'LA Metal');
+    rock_star(genre: 'Classic Rock', band: 'The Who');
+    rock_star(band: 'SlipKnot', genre: 'New Metal');
+    rock_star(genre: 'Modern Rock', band: 'Nell');
     // 매개변수의 순서가 바뀌더라도 알아서 매칭해 줌!
     ?>
 </body>
