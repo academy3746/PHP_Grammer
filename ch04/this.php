@@ -29,7 +29,7 @@
             return $intro;
             **/
 
-            return "This Band is {$this->band}. <br> 
+            return "Today's Band is called {$this->band}. <br> 
             Genre is {$this->style}. <br>";
         }
     }
