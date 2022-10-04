@@ -7,7 +7,7 @@
 <body>
     <h1>[생성자의 프로퍼티 승격]</h1>
     <hr>
-    <h2>Old Legacy style</h2>
+    <h2>Legacy PHP style</h2>
 
     <?php
     class RockStar
@@ -32,6 +32,7 @@
     $age = 80;
 
     $rock_star = new RockStar(band: $band, style: $style, age: $age);
+
     echo "<h3>{$band} (은/는) {$age}년대 {$style} 밴드입니다.</h3>"
     ?>
 
@@ -48,13 +49,14 @@
             public int $age
         )
         {
-
         }
     }
 
     $band = "Pearl Jam";
     $style = "Grunge Rock";
     $age = 90;
+
+    $rocker = new Rocker(band: $band, style: $style, age: $age);
 
     echo "<h3>{$band} (은/는) {$age}년대 {$style} 밴드입니다.</h3>"
     ?>
