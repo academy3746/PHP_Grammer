@@ -6,5 +6,6 @@ $path = "ch05/paranoid";
 
 echo basename(path: $path, suffix: ".txt")."<br>";
 // suffix: 확장자 ".txt" 만 제외한 파일명 출력
+echo basename($path)."<br>";
 echo dirname(path: $path)."<br>";
 // 파일이 포함되어 있는 디렉토리를 출력
