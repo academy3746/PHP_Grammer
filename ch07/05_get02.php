@@ -12,7 +12,7 @@ $email = "admin01@email.com";
     <title>Document</title>
 </head>
 <body>
-<h1>GET without Form Tag</h1>
+<h1>GET method without Form tag</h1>
 <a href="04_get_result.php?name=<?php echo $name ?>&id=<?php echo $id ?>&email=<?php echo $email ?>">Send!</a>
 </body>
 </html>
