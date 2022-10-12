@@ -12,7 +12,7 @@
         echo "선택한 밴드는...<br>";
         for ($i = 0; $i < count($_POST['band']); $i++) { // 전송받은 $_POST['band'] 의 갯수만큼 루프 출력
             $band = $_POST['band'][$i];
-            echo $band . "입니다."."<br>";
+            echo $band." 입니다."."<br>";
         }
     } else {
         echo "선택한 밴드가 없습니다."."<br>";
