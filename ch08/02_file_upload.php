@@ -3,7 +3,7 @@
 $upload_dir = "./photos";
 
 # 업로드할 파일의 확장자를 지정
-$allocated_ext = array('jpg','jpeg','bmp','gif');
+$allocated_ext = array('jpg','jpeg','bmp','png','gif');
 
 # If there is no Directory name like 'photos'...?
 if (!is_dir($upload_dir))
@@ -110,7 +110,8 @@ if (!move_uploaded_file($_FILES['my_file']['tmp_name'],$upload_file))
         <li>파일명: <?php echo $name ?></li>
         <li>확장자: <?php echo $ext ?></li>
         <li>파일형식: <?php echo $_FILES['my_file']['type'] ?></li>
-        <li>파일크기: <?php echo $_FILES['my_file']['size'] ?>bytes</li>
+        <li>파일크기: <?php echo number_format($_FILES['my_file']['size']) ?>bytes</li>
+        <!-- number_format(): Format a number with grouped thousands -->
     </ul>
     <a href="./03_file_download.php">Click here to download</a>
 </body>
