@@ -1,77 +1,66 @@
-# Table Name: rock_stream
-create table rock_stream
+# rock_band
+CREATE TABLE `rock_band`
 (
-    id    int          not null auto_increment,
-    genre varchar(255) not null,
-    era   int          not null,
-    primary key (`id`)
+    `id`      INT(11)      NOT NULL AUTO_INCREMENT,
+    `artist`  VARCHAR(255) NOT NULL,
+    `hit_age` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`)
 );
 
-insert into rock_stream (genre, era)
-VALUES ('Hard Rock', 80);
-insert into rock_stream (genre, era)
-VALUES ('Classic Rock', 70);
-insert into rock_stream (genre, era)
-VALUES ('Thrash Metal', 80);
-insert into rock_stream (genre, era)
-VALUES ('LA Metal', 80);
-insert into rock_stream (genre, era)
-VALUES ('Grunge Rock', 90);
-insert into rock_stream (genre, era)
-VALUES ('Progressive Rock', 80);
-insert into rock_stream (genre, era)
-VALUES ('Glam Rock', 80);
-insert into rock_stream (genre, era)
-VALUES ('Modern Rock', 90);
-insert into rock_stream (genre, era)
-VALUES ('Post Grunge', 90);
-insert into rock_stream (genre, era)
-VALUES ('Neo Punk', 90);
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (1, 'Led Zeppelin', '1970s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (2, 'Deep Purple', '1980s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (3, 'Nirvana', '1990s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (4, 'Pearl Jam', '1990s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (5, 'Guns N Roses', '1980s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (6, 'Oasis', '1990s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (7, 'Motor Head', '1980s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (8, 'Iron Maiden', '1980s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (9, 'R.A.T.M', '1990s');
+INSERT INTO rock_band (id, artist, hit_age)
+VALUES (10, 'X-JAPAN', '1990s');
 
-
-# Table Name:
-create table rock_band
+# remain_songs
+CREATE TABLE `remain_songs`
 (
-    id       int          not null auto_increment,
-    band     varchar(255) not null,
-    era      int          not null,
-    genre_id int          not null,
-    primary key (`id`)
+    `id`          INT(11)      NOT NULL AUTO_INCREMENT,
+    `artist`      VARCHAR(255) NOT NULL,
+    `song`        VARCHAR(255) NOT NULL,
+    `release_age` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`)
 );
 
-insert into rock_band (band, era, genre_id)
-VALUES ('Led Zeppelin', 80, 1);
-insert into rock_band (band, era, genre_id)
-VALUES ('Deep Purple', 80, 1);
-insert into rock_band (band, era, genre_id)
-VALUES ('Nirvana', 90, 5);
-insert into rock_band (band, era, genre_id)
-VALUES ('Megadeth', 80, 3);
-insert into rock_band (band, era, genre_id)
-VALUES ('Guns N Roses', 80, 4);
-insert into rock_band (band, era, genre_id)
-VALUES ('Green Day', 90, 10);
-insert into rock_band (band, era, genre_id)
-VALUES ('Sum41', 90, 10);
-insert into rock_band (band, era, genre_id)
-VALUES ('Pantera', 80, 3);
-insert into rock_band (band, era, genre_id)
-VALUES ('KISS', 80, 7);
-insert into rock_band (band, era, genre_id)
-VALUES ('Travis', 90, 8);
-insert into rock_band (band, era, genre_id)
-VALUES ('Creed', 90, 9);
-insert into rock_band (band, era, genre_id)
-VALUES ('The Who', 70, 2);
-insert into rock_band (band, era, genre_id)
-VALUES ('The Pink Floyd', 80, 6);
-insert into rock_band (band, era, genre_id)
-VALUES ('Maroon5', 90, 8);
-insert into rock_band (band, era, genre_id)
-VALUES ('King Crimson', 80, 6);
-
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (1, 'Led Zeppelin', 'Stairway to heaven', '70');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (2, 'Deep Purple', 'Smoke on the water', '80');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (3, 'Nirvana', 'Smells like teens spirit', '90');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (4, 'Pearl Jam', 'sucks', '90');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (5, 'Guns N Roses', 'Welcome to the jungle', '80');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (6, 'Oasis', 'Wonder wall', '90');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (7, 'Motor Head', 'Ace of spades', '80');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (8, 'Iron Maiden', 'The trooper', '80');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (9, 'R.A.T.M', 'They sucks', '90');
+INSERT INTO remain_songs (id, artist, song, release_age)
+VALUES (10, 'X-JAPAN', 'Endless rain', '90');
 
 # Inner Join
-select rb.band, rs.genre, rb.era from rock_stream rs
-    inner join rock_band rb on rs.id = rb.genre_id
-order by rb.era;
+SELECT *
+FROM rock_band rb
+         INNER JOIN remain_songs rs on rb.artist = rs.artist
+order by rs.release_age;
