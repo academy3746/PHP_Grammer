@@ -108,3 +108,12 @@ from rock_band as rb
          join rock_stream as rs on rb.genre_code = rs.id
 where rs.genre = 'Grunge Rock'
   and rb.era = 90;
+
+# Alter rock_stream table
+alter table rock_stream
+    add my_date   datetime,
+    add your_date timestamp
+;
+
+alter table rock_stream
+    drop my_date;
