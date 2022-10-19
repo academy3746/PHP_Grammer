@@ -16,6 +16,7 @@ if (!$conn) {
 $sql = " insert into code_otaku.rock_band (band, era, genre_code) VALUES ('Sum41', 90, 10) ";
 $sql = " insert into code_otaku.rock_band (band, era, genre_code) VALUES ('Travis', 90, 9) ";
 $sql = " insert into code_otaku.rock_stream (genre, era) VALUES ('Post Grunge', 90)";
+$sql = " insert into code_otaku.rock_band (band, era, genre_code) VALUES ('Alter Bridge', 00, 11) ";
 
 if (mysqli_query($conn, $sql)) {
     echo "New Record created!";
