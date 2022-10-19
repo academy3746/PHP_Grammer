@@ -108,3 +108,6 @@ from rock_band as rb
          join rock_stream as rs on rb.genre_code = rs.id
 where rs.genre = 'Grunge Rock'
   and rb.era = 90;
+  
+select * from rock_band;
+select * from rock_stream;
