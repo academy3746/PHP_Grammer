@@ -3,10 +3,10 @@
 $mysql_host = "localhost";
 $mysql_user = "root";
 $mysql_password = "1234";
-$mysql_db = "code_otaku";
+//$mysql_db = "code_otaku";
 
 # DB Connection
-$conn = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_db);
+$conn = mysqli_connect($mysql_host, $mysql_user, $mysql_password);
 
 if (!$conn) {
     die("DB Connection [Failed]: ".mysqli_connect_error());
