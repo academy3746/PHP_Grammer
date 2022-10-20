@@ -1,6 +1,5 @@
 <?php
-# Include 'db_conn.php' file to connect DB
-include "./data/db_conn.php"
+include("./data/db_conn.php"); // Include this file to connect with DB.
 ?>
 <!doctype html>
 <html>
@@ -11,22 +10,20 @@ include "./data/db_conn.php"
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
 <div class="container">
-    <h4 class="display-4 text=center">Welcome!</h4>
-    <form action="./03_login_check.php" method="post">
+    <h4 class="display-4 text-center">WELCOME</h4>
+    <form action="./04_login_check.php" method="post">
         <div class="mb-3">
-            <label for="bh_id">ID</label>
+            <label for="bh_id">아이디</label>
             <input type="text" id="bh_id" name="bh_id" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="bh_password">Password</label>
+            <label for="bh_password">비밀번호</label>
             <input type="password" id="bh_password" name="bh_password" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary">LOGIN</button>
-        <a href="./02_register.php" class="btn btn-secondary">JOIN US</a>
+        <a href="02_register.php" class="btn btn-secondary">JOIN US</a>
     </form>
 </div>
-
 </body>
 </html>
