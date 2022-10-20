@@ -7,7 +7,7 @@ $bh_password = trim($_POST['bh_password']);
 
 # ID or Password whitespace check
 if (!$bh_id || !$bh_password) {
-    echo "<script>alert('아이디 혹은 비밀번호가 공백이면 안됩니다.');</script>";
+    echo "<script>alert('아이디 혹은 비밀번호를 입력해주세요!');</script>";
     echo "<script>location.replace('./01_index.php');</script>";
     exit();
 }

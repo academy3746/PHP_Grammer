@@ -13,7 +13,7 @@ include "./data/db_conn.php"
 <body>
 
 <div class="container">
-    <h4 class="display-4 text=center">MEMBER LOGIN</h4>
+    <h4 class="display-4 text=center">Welcome!</h4>
     <form action="./03_login_check.php" method="post">
         <div class="mb-3">
             <label for="bh_id">ID</label>
